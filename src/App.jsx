@@ -7,6 +7,7 @@ import Aboutme from './pages/Aboutme'
 import Skills from './pages/Skills'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
+import TypewriterComponent from 'typewriter-effect'
 
 function App() {
 

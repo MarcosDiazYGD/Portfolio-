@@ -1,13 +1,9 @@
 :root {
-  --color-bg: #845EC2;
-  --color-text: #D65DB1;
-  --color-title: #FF6F91;
+  --color-bg:#2B3A55;
+  --color-first:#00ABB3;
+  --color-second:#EAEAEA;
+  --color-third: #CE7777;
 
-  /* 
-  --color-bg:  #FFC75F;
-  --color-text:#FF9671 ;
-  --color-title: #F9F871;
-  */
 }
 
 * {
@@ -16,8 +12,8 @@
   box-sizing: border-box;
 }
 body {
+  background: var(--color-bg); 
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--color-text);
 }
 #particles-js {
   position: fixed;
@@ -29,18 +25,22 @@ body {
 }
 
 .navbar--ul {
-  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.202);
   list-style: none;
-  margin-top: 1rem;
+  width: 100%;
 }
 
 .navbar--link a {
   text-decoration: none;
   font-size: 25px;
-  color: var(--color-text);
+  color: var(--color-second);
+  background: #000;
+  padding: 1rem;
 }
+
 .Home {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -56,16 +56,23 @@ body {
 }
 
 .container-welcome-text h1 {
+  color: var(--color-title);
   position: relative;
   top: -100px;
-  font-size: 55px;
-  font-weight: 400
-  ;
+  font-size: 50px;
+  font-weight: 400;
+  color: var(--color-second);
 }
 
 .important {
   color: var(--color-first);
+  font-weight: 500;
+}
+
+.writing {
+  color:var(--color-third);
   font-weight: 700;
+  font-size: 55px;
 }
 
 .description-skills {

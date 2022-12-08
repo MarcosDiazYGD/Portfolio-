@@ -3,15 +3,22 @@ import logo from '../assets/logo/passion-for-programming.png'
 import blackJS from '../assets/logo/black-js.png'
 import svgs from '../assets/logo/svg/svg'
 import svg from '../assets/logo/svg/svg';
+import TypewriterComponent from 'typewriter-effect';
+
 const Home = () => {
   return (
     <div className='Home'>
 
       <div className='container-welcome-text'>
-        <h1>
-          Hola soy <span className='important'>Marcos Diaz</span> <br />
-          <span className="important auto-text">Front-end Developer</span>
-        </h1>
+        <h1>Hola me llamo <span className='important'>Marcos Diaz</span>
+        <span className='writing'>
+          <TypewriterComponent 
+          onInit={ type => {
+            type.typeString('Front-end Developer').pauseFor(4000).start()
+          }} /> 
+          </span>
+          
+          </h1>
 
         <div className='description-skills'>
           <img className='icon skill' src={svgs.html} />
