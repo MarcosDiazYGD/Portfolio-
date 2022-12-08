@@ -1,0 +1,121 @@
+:root {
+  --color-bg: #845EC2;
+  --color-text: #D65DB1;
+  --color-title: #FF6F91;
+
+  /* 
+  --color-bg:  #FFC75F;
+  --color-text:#FF9671 ;
+  --color-title: #F9F871;
+  */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-text);
+}
+#particles-js {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.navbar--ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.navbar--link a {
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--color-text);
+}
+.Home {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 100vh;
+}
+
+.container-welcome-text {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-welcome-text h1 {
+  position: relative;
+  top: -100px;
+  font-size: 55px;
+  font-weight: 400
+  ;
+}
+
+.important {
+  color: var(--color-first);
+  font-weight: 700;
+}
+
+.description-skills {
+  display: flex;
+  gap: 1rem;
+
+}
+
+.description-skills img{ 
+  width: 80px;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 600px;
+  animation: up 6s ease-out infinite;
+}
+
+@keyframes up {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 20px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.button {
+  padding: 1.5rem 3rem;
+  border-radius: 10px;
+  background-color: var(--color-first);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  border: transparent;
+}
+
+.icon {
+  width: 120px;  
+}
+
+.download-cv{
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+}
+
