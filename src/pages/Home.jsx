@@ -38,6 +38,9 @@ const Home = () => {
           </a>
         </div>
       </div>
+      <div className='arrowDowm'>
+        <i className="fa-solid fa-angles-down"></i>
+      </div>
     </div>
   );
 };

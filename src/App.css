@@ -4,6 +4,13 @@
   --color-second: rgb(255, 204, 0);
   --color-third: lightcyan;
 
+  --color-bg1: #fcb045;
+  --color-bg2: #fd1d1d;
+
+  /* 
+  --color-bg1:#000000;
+  --color-bg2:#2f1648;
+  */
 }
 
 * {
@@ -16,36 +23,23 @@ body {
   background: var(--color-bg);
   background: #833ab4; /* fallback for old browsers */
   background: -webkit-linear-gradient(
-    to right,
-    #fcb045,
-    #fd1d1d,
-    #833ab4
-  ), url(./assets/business-ga8e9da6e8_1920.jpg); /* Chrome 10-25, Safari 5.1-6 */
+      to right,
+      var(--color-bg1),
+      var(--color-bg2),
+      #833ab46c
+    ),
+    url(./assets/business-ga8e9da6e8_1920.jpg); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    to right,
-    #fcb045,
-    #fd1d1dea,
-    #833ab46c
-  ), url(./assets/business-ga8e9da6e8_1920.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      to right,
+      var(--color-bg1),
+      var(--color-bg2),
+      #833ab46c
+    ),
+    url(./assets/business-ga8e9da6e8_1920.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   background-size: contain;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-
-
-/* ========================== */
-/* ===== GLOBAL DESIGNS ===== */
-/* ========================== */
-.home,
-.about,
-.skills,
-.portfolio,
-.contact {
-  min-height: 100vh;
-}
-
-
 
 /* ================== */
 /* ===== NAVBAR ===== */
@@ -85,8 +79,6 @@ body {
   color: var(--color-third);
 }
 
-
-
 /* ====================== */
 /* ===== PARTICLES ====== */
 /* ====================== */
@@ -99,8 +91,6 @@ body {
   z-index: -1;
 }
 
-
-
 /* ================ */
 /* ===== HOME ===== */
 /* ================ */
@@ -110,6 +100,7 @@ body {
   width: 100%;
   height: 100vh;
   padding: 0 3rem;
+  margin-bottom: 6rem;
 }
 
 .container-welcome-text {
@@ -185,9 +176,8 @@ body {
 .icon {
   width: 120px;
   border-bottom: 3px solid black;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
-
 
 .download-cv {
   position: fixed;
@@ -196,20 +186,79 @@ body {
   animation: multicolor 4s infinite linear;
 }
 
-@keyframes multicolor {
-  0% { background: darkorange; color: white;}
-  25% { background: darkcyan ;}
-  75% { background: darkmagenta;}
-  100% { background:darkorange;}
+.arrowDowm{
+  position: relative;
+  text-align: center;
+  width: 100%;
+  grid-area: 2/1/2/4;
+  height: fit-content;
 }
 
+.fa-angles-down {
+  position: absolute;
+  font-size: 40px;
+  top: -100px;
+  animation: down 3s ease infinite;
+}
 
+@keyframes down {
+  0% {top: -100 ; }
+  50% {top: -80px ; }
+  100% {top: -100 ; }
+}
+
+@keyframes multicolor {
+  0% {
+    background: darkorange;
+    color: white;
+  }
+  25% {
+    background: darkcyan;
+  }
+  75% {
+    background: darkmagenta;
+  }
+  100% {
+    background: darkorange;
+  }
+}
 
 /* ================= */
 /* ===== ABOUT ===== */
 /* ================= */
 
 .about {
-  background: black;
-  z-index: 12;
+  background: var(--color-third);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 0 10rem;
+  border-radius: 50px ;
+  padding: 4rem;
+  min-height: 50vh;
+  gap: 1rem;
+}
+
+.about h1 {
+  text-align: center;
+  color:var(--color-first);
+  text-shadow: 0 0 20px lightcoral;
+  margin-bottom:1rem;
+  text-transform: capitalize;
+}
+
+.nameAndCountry{
+  display:flex; 
+  justify-content: space-between; 
+  align-items:center; 
+  border-bottom: 1px solid black
+}
+
+.myDescription {
+  font-size: 30px;
+  text-align: justify;
+}
+
+.myDescription p:first-child {
+  margin-bottom: 1rem;
 }
