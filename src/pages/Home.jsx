@@ -7,14 +7,14 @@ import TypewriterComponent from 'typewriter-effect';
 
 const Home = () => {
   return (
-    <div className='Home'>
+    <div className='Home' id='home'>
 
       <div className='container-welcome-text'>
         <h1>Hola me llamo <span className='important'>Marcos Diaz</span>
         <span className='writing'>
           <TypewriterComponent 
           onInit={ type => {
-            type.typeString('Front-end Developer').pauseFor(4000).start()
+            type.typeString('Front-end Developer').start()
           }} /> 
           </span>
           

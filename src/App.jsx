@@ -12,21 +12,14 @@ import TypewriterComponent from 'typewriter-effect'
 function App() {
 
   return (
-    <HashRouter >
       <div className="App">
         <Navbar />
-
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<Aboutme />} />
-          <Route path='/skills' element={<Skills />} />
-          <Route path='/portfolio' element={<Portfolio />} />
-          <Route path='/contact' element={<Contact />} />
-
-        </Routes>
-
+        <Home />
+        <Aboutme />
+        <Skills />
+        <Portfolio />
+        <Contact />
       </div>
-    </HashRouter>
   )
 }
 
