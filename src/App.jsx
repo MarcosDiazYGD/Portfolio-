@@ -12,11 +12,8 @@ function App() {
 
   return (
     <div className="App">
-      <Helmet>
-        <script src="./libraries/particles.min.js"></script>
-        <script src="./libraries/particlesConfig.js"></script>
-      </Helmet>
-      <div id="particles-js"></div>
+        
+      {/* <div id="particles-js"></div> */}
       <Navbar />
       <Home />
       <Aboutme />
