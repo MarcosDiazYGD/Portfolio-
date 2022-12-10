@@ -1,4 +1,4 @@
-particlesJS(
+export default particlesJS(
     {
         "particles": {
           "number": {

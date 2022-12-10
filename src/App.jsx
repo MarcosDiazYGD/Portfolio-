@@ -7,11 +7,12 @@ import Skills from './pages/Skills'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
 import { Helmet } from 'react-helmet'
+import particlesJS from './libraries/particlesConfig'
 
 function App() {
 
   /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-  particlesJS.load('particles-js', 'assets/particles.json', function () {
+  particlesJS?.load('particles-js', 'assets/particles.json', function () {
     console.log('callback - particles.js config loaded');
   });
 
